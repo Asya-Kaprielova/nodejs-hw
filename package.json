@@ -28,7 +28,7 @@
   "keywords": [],
   "author": "Asya Kapriielova <nastena.kaprielova209@gmail.com>",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Asya-Kaprielova/nodejs-hw/issues"
   },
