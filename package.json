@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "pino-http": "^11.0.0",
+    "pino-pretty": "^13.2.0"
+  },
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asya-Kaprielova/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "Asya Kapriielova <nastena.kaprielova209@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Asya-Kaprielova/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/Asya-Kaprielova/nodejs-hw#readme"
+}
