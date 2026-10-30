@@ -6,24 +6,6 @@ import 'dotenv/config';
 const app = express();
 const PORT = process.env.PORT ?? 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Retrieved all notes' });
-});
-
-
-app.get('/notes/:id', (req, res) => {
-  const { id } = req.params;
-  res.status(200).json({ message: `Retrieved note with ID: ${id}` });
-});
-
-app.get('/test-error', () => {
-  throw new Error('Simulated server error');
-});
-
 
 // Middleware
 app.use(express.json());
@@ -45,19 +27,23 @@ app.use(
 );
 
 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+app.get('/notes', (req, res) => {
+  res.status(200).json({ message: 'Retrieved all notes' });
+});
 
 
+app.get('/notes/:id', (req, res) => {
+  const { id } = req.params;
+  res.status(200).json({ message: `Retrieved note with ID: ${id}` });
+});
 
-
-
-
-
-
-
-
-
-
-
+app.get('/test-error', () => {
+  throw new Error('Simulated server error');
+});
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
