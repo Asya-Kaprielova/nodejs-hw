@@ -9,8 +9,8 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-userSchema.pre('save', async function () {
-  if (this.username) {
+userSchema.pre('save', function () {
+  if (!this.username) {
     this.username = this.email;
   }
 });
