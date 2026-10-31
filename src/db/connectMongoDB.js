@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-console.log("Connected to database:", mongoose.connection.name);
 
 export const connectMongoDB = async () => {
   try {
