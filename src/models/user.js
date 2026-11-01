@@ -5,12 +5,17 @@ const userSchema = new Schema(
     username: { type: String, trim: true, required: false },
     email: { type: String, trim: true, unique: true, required: true },
     password: { type: String, required: true },
+    avatar: {
+      type: String,
+      required: false,
+      default: "https://ac.goit.global/fullstack/react/default-avatar.jpg",
+    }
   },
   { timestamps: true }
 );
 
-userSchema.pre('save', async function () {
-  if (this.username) {
+userSchema.pre('save', function () {
+  if (!this.username) {
     this.username = this.email;
   }
 });
